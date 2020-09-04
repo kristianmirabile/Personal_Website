@@ -3,10 +3,11 @@
 {% load static %}
 
 {% block content %}
-<div class="p-3 mb-2 bg-dark text-white">
-<h1 id="blogtitle" class="font-weight-bold text-center">~The Blog~</h1>
+<div class="jumbotron">
+  <h1 class="display-4">The Blog~</h1>
+  <p class="lead">Kristian has written {{ blogs.count }} blog{{ blogs.count|pluralize }}</p>
+  <hr class="my-4">
 
-<h3 class="text-center mb-5">Kristian has written {{ blogs.count }} blog{{ blogs.count|pluralize }}</h3>
 
 {% for blog in blogs %}
 <div class="row justify-content-center my-3">
@@ -23,4 +24,5 @@
 {% endfor %}
 
 {% endblock %}
+</div>
 </div>
